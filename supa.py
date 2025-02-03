@@ -6,8 +6,7 @@ conn = st.connection("supabase",type=SupabaseConnection)
 
 # Perform query.
 rows = execute_query(conn.table("ayat_quran").select("*"), ttl=None)
-# conn.table("ayat_quran").select("*"), ttl=None
-# print(rows)
+
 # Print results.
 for row in rows.data:
     st.write(f"{row['id']} : {row['indoText']}:")
